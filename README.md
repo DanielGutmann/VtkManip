@@ -17,11 +17,14 @@ This is a utility for performing basic arithmetic-like operations on VTK legacy 
 There are functions to perform {addition, subtraction, multiplication, division} operations, to rotate VTK legacy files about the central axis by 90&deg, as well as the ability to average an arbitrarily long list of VTK legacy files. The output is a new VTK legacy file, and the original files are unchanged. You can use the following python script (without needing to know anything about python):
 
 * For {addition, subtraction, multiplication, division} eg:
-  python VtkManip.py --add --vtk1=’/path/to/file1.vtk’ --vtk2=’/path/to/file2.vtk’ --outname="out.vtk"
-\t where ~~~--add~~~ can be replaced by {~~~--subtract~~~,~~~--multiply~~~ or ~~~--divide~~~}. In the above examples, you can also replace the second file with a number (in order to perform scalings etc), eg --vtk2=1.44. For a given operator {addition, subtraction, multiplication, division}, the first vtk (vtk1) file acts from the left of the operator and the second vtk file acts from the right of the operator (vtk2).
 
-* Average a list of files (Note: accepts ~~~*~~~ wildcarding):
+  python VtkManip.py --add --vtk1=’/path/to/file1.vtk’ --vtk2=’/path/to/file2.vtk’ --outname="out.vtk"
+\t where `--add` can be replaced by {`--subtract`,`--multiply` or `--divide`}. In the above examples, you can also replace the second file with a number (in order to perform scalings etc), eg --vtk2=1.44. For a given operator {addition, subtraction, multiplication, division}, the first vtk (vtk1) file acts from the left of the operator and the second vtk file acts from the right of the operator (vtk2).
+
+* Average a list of files (Note: accepts `*` wildcarding):
+
   python VtkManip.py --average --vtk1='/path/to/file1.vtk,/path/to/multiple*files.vtk,/path/to/file2.vtk' --outname="out.vtk"
 
 * Rotate a file by 90&deg:
+
   python VtkManip.py --rotate --vtk1=’/path/to/file1.vtk’ --outname="out.vtk"
