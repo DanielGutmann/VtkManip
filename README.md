@@ -9,7 +9,7 @@ There are functions to perform {addition, subtraction, multiplication, division}
 
   `python VtkManip.py --add --vtk1=’/path/to/file1.vtk’ --vtk2=’/path/to/file2.vtk’ --outname="out.vtk"`
 
-  where `--add` can be replaced by {`--subtract`,`--multiply` or `--divide`}. In the above examples, you can also replace the second file with a number (in order to perform scalings etc), eg --vtk2=1.44. For a given operator {addition, subtraction, multiplication, division}, the first vtk (vtk1) file acts from the left of the operator and the second vtk file acts from the right of the operator (vtk2).
+  where `--add` can be replaced by {`--subtract`,`--multiply` or `--divide`}. In the above examples, you can also replace the second file with a number (in order to perform scalings etc), eg --vtk2=1.44. For a given operator {addition, subtraction, multiplication, division}, the first VTK (vtk1) file acts from the left of the operator and the second VTK file acts from the right of the operator (vtk2).
 
 * Average a list of files (Note: accepts `*` wildcarding):
 
