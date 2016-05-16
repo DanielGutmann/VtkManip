@@ -21,7 +21,6 @@ def ProcessVtk(vtkFileName, #<--- Input VTK file name
                normal    = [1, 0, 0],
                cameraPos = [-1, 0 ,0]):
 
-
     #---- Read the vtk file
     vtkreader = pvs.LegacyVTKReader(FileNames = [vtkFileName])
     print "Got vtk",vtkFileName
@@ -73,7 +72,7 @@ def ProcessVtk(vtkFileName, #<--- Input VTK file name
     pvs.WriteImage(pngFileName)
     
     #---- Clean up on behalf of ParaView
-    Delete(slicer)
-    Delete(vtkreader)
+    pvs.Delete(slicer)
+    pvs.Delete(vtkreader)
     del slicer
     del vtkreader
